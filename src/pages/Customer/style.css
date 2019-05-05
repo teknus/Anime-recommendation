@@ -1,0 +1,46 @@
+.Form {
+	background: #ffffff;
+	box-shadow: 1px 1px 5px 1px #9b9b9b;
+	z-index: 90;
+	width: 600pt;
+	padding: 50pt;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+}
+
+h2 {
+	color: #333030;
+}
+
+h3 {
+	color: #333030;
+}
+
+body {
+	color: #4b4b4b;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+hr {
+	height: 6pt;
+	display: block;
+	border: None;
+	background: linear-gradient(to right, #e65100, #ffa000);
+}
+
+button {
+	cursor: pointer;
+	background: linear-gradient(to right, #e65100, #ffa000);
+	font-family: 'Open Sans Semibold';
+	color: #ffffff;
+	font-size: 14pt;
+	border: none;
+	height: 35pt;
+	width: 230pt;
+}
+
+.submit {
+	padding-top: 50pt;
+	padding-left: 180pt;
+}
