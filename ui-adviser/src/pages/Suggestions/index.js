@@ -14,7 +14,6 @@ export class Suggestions extends Component {
 			<div className="nav">
 				<h2>Minhas sugestões</h2>
 			</div>
-			<hr></hr>
 			<div className = "gallery">
 				<div className="suggestion">
 					<p className="description">Puesto de tacos</p>
