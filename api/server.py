@@ -7,27 +7,19 @@ app = Flask(__name__)
 path = "../model/" 
 clf = joblib.load(path + "GropClassificator.pkl")
 
-def openfiles():
+
+
+def get_restaurants(group):
     customers = []
     with open(path + "grouped_users.csv") as file:
         customers = pd.read_csv(file)
-    places = []
-    with open(path + "binaryzed_users.csv") as file:
-        places = pd.read_csv(file)
     ratings = []
     with open(path + "rating_final.csv") as file:
         ratings = pd.read_csv(file)
     geoplaces2 = []
     with open(path + "geoplaces2.csv") as file:
         geoplaces2 = pd.read_csv(file)
-    return customers,places,ratings,geoplaces2
-
-
-
-def get_restaurants(group):
-    customers, places, ratings, geoplaces2 = openfiles()
     restaurants = set()
-    ratings = list()
     for id in customers[customers.group == group].userID:
         for el in ratings.values:
                 if el[0] == id:
