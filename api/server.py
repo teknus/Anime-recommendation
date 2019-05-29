@@ -4,10 +4,8 @@ import numpy as np
 import pandas as pd
 
 app = Flask(__name__)
-path = "../model/" 
+path = "" 
 clf = joblib.load(path + "GropClassificator.pkl")
-
-
 
 def get_restaurants(group):
     customers = []
@@ -36,13 +34,10 @@ def get_restaurants(group):
     return response
 
 
-
-
 @app.route('/v1/api/<uuid>', methods=['GET', 'POST'])
 def predict(uuid):
     content = request.json['user']
     item_g = clf.predict([np.array(content)])[0]
-    print(item_g)
     return jsonify({"restaurants":get_restaurants(item_g)})
 
 if __name__ == '__main__':
